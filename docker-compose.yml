@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  node: 
+    image: brunogsantos/node
+    container_name: app
+    networks:
+      - node-network
+
+  nginx:
+    image: brunogsantos/nginx
+    container_name: nginx
+    networks:
+      - node-network
+    ports:
+      - "8080:80"
+networks:
+  node-network:
+    driver: bridge
