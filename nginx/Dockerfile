@@ -1,8 +1,4 @@
 FROM nginx:latest
 
-WORKDIR /app
-
-RUN apt-get update && \ 
-    apt-get install vim -y
-
-COPY html/ /usr/share/nginx/html
+RUN rm /etc/nginx/conf.f/default.conf
+COPY nginx.conf /etc/nginx/conf.d
