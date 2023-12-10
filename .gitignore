@@ -88,3 +88,6 @@ temp
 
 # Mysql
 mysql/db
+
+# Package-lock.json
+node/package-lock.json

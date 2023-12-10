@@ -23,6 +23,7 @@ services:
       dockerfile: Dockerfile
     image: brunogsantos/node
     container_name: app
+    tty: true
     networks:
       - node-network
 
