@@ -26,6 +26,8 @@ services:
     tty: true
     networks:
       - node-network
+    volumes:
+      - ./node:/usr/src/app
 
   nginx:
     build:
